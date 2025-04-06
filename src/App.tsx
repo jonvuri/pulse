@@ -4,9 +4,14 @@ import "./App.css";
 
 function App() {
   const play = () => {
-    // TODO next: 4 on the floor
     const synth = new Tone.Synth().toDestination();
-    synth.triggerAttackRelease("C4", "8n");
+
+    //play a note every quarter-note
+    new Tone.Loop((time) => {
+      synth.triggerAttackRelease("C3", "16n", time);
+    }, "4n").start(0);
+
+    Tone.getTransport().start();
   };
 
   return (
