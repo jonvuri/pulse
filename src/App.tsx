@@ -4,7 +4,7 @@ import "./App.css";
 
 function App() {
   const play = () => {
-    const synth = new Tone.Synth().toDestination();
+    const synth = new Tone.MembraneSynth().toDestination();
 
     //play a note every quarter-note
     new Tone.Loop((time) => {
