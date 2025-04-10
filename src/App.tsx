@@ -65,6 +65,14 @@ function App() {
     dynamicLoop.start(0);
   };
 
+  const playAfterStart = () => {
+    Tone.getTransport().start();
+  };
+
+  const stop = () => {
+    Tone.getTransport().stop();
+  };
+
   return (
     <>
       <div class="card">
@@ -110,6 +118,8 @@ function App() {
           />
         </div>
         <button onClick={play}>play</button>
+        <button onClick={playAfterStart}>play after start</button>
+        <button onClick={stop}>stop</button>
         <div>
           <label>
             Swing: {(swingAmount() * 100).toFixed(0)}%
