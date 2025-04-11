@@ -1,3 +1,5 @@
+# Pulse
+
 ## Usage
 
 ```bash
